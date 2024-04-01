@@ -1,0 +1,183 @@
+go mod init example/hello - initialisation d'un module
+go run .                  - démarrage d'un fichier de commande
+
+
+Langage 
+
+Opérateur particulier
+defer                               #Réalisation à la fin de l'exécution de la boucle de code
+panic et recover                    #Gestion des erreurs
+
+Tableau
+var tab [size]type
+tab := [size]type{valeur}
+tab := [...]type{valeur}
+var a := tab[index]
+tab[index] = valeur                 #Modification valeur
+
+Les constantes se déclare avec le mot clé const
+
+structure
+x := 10
+if x > 5 {
+    fmt.Println("x est plus grand que 5")
+}
+
+
+if x > 5 {
+    fmt.Println("x est plus grand que 5")
+} else {
+    fmt.Println("x est inférieur ou égal à 5")
+}
+
+for i := 0; i < 5; i++ {
+    fmt.Println(i)
+}
+
+i := 0
+for i < 5 {
+    fmt.Println(i)
+    i++
+}
+
+
+for index, valeur := range []int{1, 2, 3, 4, 5} {
+    fmt.Printf("Index: %d, Valeur: %d\n", index, valeur)
+}
+
+
+switch x {
+case 1:
+    fmt.Println("x est égal à 1")
+case 2:
+    fmt.Println("x est égal à 2")
+default:
+    fmt.Println("x n'est ni 1 ni 2")
+}
+
+
+Maps
+var maMap map[string]int
+maMap = make(map[string]int)        #initialisation
+var maMap map[string]int            #Déclaration et initialisation
+maMap["nouvelleClé"] = 30
+valeur := maMap["nouvelleClé"]
+delete(maMap, "nouvelleClé")
+
+Pointeurs
+var monPointeur *int                #déclaration
+var maVariable int = 42
+monPointeur = &maVariable           #utilisation pointeur avec var
+fmt.Println(*monPointeur)           #accès au pointeur
+*monPointeur = 30                   #Modifie la valeur de maVariable à 30
+
+func modifieValeur(pointeur *int) { #Pointeur dans les fonctions
+    *pointeur = 10
+}
+
+func main() {
+    var maVariable int = 5
+    modifieValeur(&maVariable)
+    fmt.Println(maVariable) // Affichera 10
+}
+
+
+Struct - Pas POO en langage Go
+type Personne struct {
+    Nom   string
+    Age   int
+}
+
+func (p Personne) SePresenter() {                                               #fonction de la structure personne
+    fmt.Printf("Bonjour, je m'appelle %s et j'ai %d ans.\n", p.Nom, p.Age)
+}
+
+
+
+
+Instruction pour les écritures
+f.Write()
+f.WriteString()
+f.Sync()
+
+Instruction pour la commande 
+f.Printf()
+
+Déclaration de variable
+var ou  := (équivalent)
+
+Opérateur logique
++ * - / % && || !
+
+Opérateur de comparaison
+== != < > <= >=
+
+Les grands types de données
+int float64 bool string
+
+Utilisation de Goroutines 
+Permet d'exécuter une fonction en tache de fond 
+go nomfinction()
+time.sleep(nb*time.Second)
+
+Instruction pour les buffers
+bufio.NewWriter()
+budio.NewWriter().Flush()
+
+Instruction pour les OS
+os.Create()
+
+Liste : 
+        fmt:
+        https://pkg.go.dev/fmt
+
+    os:
+        https://pkg.go.dev/os
+
+    net:
+        https://pkg.go.dev/net
+
+    http:
+        https://pkg.go.dev/net/http
+
+    io:
+        https://pkg.go.dev/io
+
+    bufio:
+        https://pkg.go.dev/bufio
+
+    strconv:
+        https://pkg.go.dev/strconv
+
+    strings:
+        https://pkg.go.dev/strings
+
+    time:
+        https://pkg.go.dev/time
+
+    math:
+        https://pkg.go.dev/math
+
+    encoding/json:
+        https://pkg.go.dev/encoding/json
+
+    html/template:
+        https://pkg.go.dev/html/template
+
+    text/template:
+        https://pkg.go.dev/text/template
+
+    log:
+        https://pkg.go.dev/log
+
+    os/exec:
+        https://pkg.go.dev/os/exec
+
+    regexp:
+        https://pkg.go.dev/regexp
+
+    sync:
+        https://pkg.go.dev/sync
+
+    testing:
+        https://pkg.go.dev/testing
