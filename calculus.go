@@ -17,7 +17,7 @@ func main() {
 	f, err := os.Create("/tmp/dat2")
 	check(err)
 
-	defer f.Close()
+	defer f.Close()							//Permet d'exécuter le code à la fin du lancement 
 
 	d2 := []byte{115, 111, 109, 101, 10}
 	n2, err := f.Write(d2)
